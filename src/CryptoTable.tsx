@@ -17,6 +17,7 @@ export const CryptoTable = () => {
   }, {
     // refetches data every minute
     refetchInterval: MINUTE,
+    retry: false,
   })
 
   // use spin delay is a helper that prevents flashes of loading state
