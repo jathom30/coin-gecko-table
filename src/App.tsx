@@ -7,9 +7,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className='App'>
-        <CryptoTable />
-      </div>
+      <CryptoTable />
     </QueryClientProvider>
   )
 }

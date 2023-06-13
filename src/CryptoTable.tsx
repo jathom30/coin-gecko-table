@@ -15,21 +15,22 @@ export const CryptoTable = () => {
     const response = await getCrypto()
     return response
   }, {
+    // refetches data every minute
     refetchInterval: MINUTE,
-    // enabled: false
   })
 
+  // use spin delay is a helper that prevents flashes of loading state
+  const isLoading = useSpinDelay(status === 'loading')
   const isFetching = useSpinDelay(fetchStatus === 'fetching')
 
-  // const tokens = mockRes
-
+  // extremely basic tanstack table setup
   const table = useReactTable({
     data: tokens || [],
     columns,
     getCoreRowModel: getCoreRowModel(),
   })
 
-  if (status === 'loading') {
+  if (isLoading) {
     return <Loader />
   }
 
@@ -49,6 +50,7 @@ export const CryptoTable = () => {
 
   return (
     <table className="CryptoTable">
+      {/* added a small fetching indicator when data is refetched */}
       {isFetching ? <Fetching /> : null}
       <thead>
         {table.getHeaderGroups().map(headerGroup => (

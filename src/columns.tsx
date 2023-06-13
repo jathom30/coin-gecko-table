@@ -13,6 +13,7 @@ export const columns = [
       const tokenName = info.getValue()
       return (
         <div className="token">
+          {/* FlexBox is a little layout component I use in a lot of my apps to reduce the amount of times I have to write display: flex in a stylesheet somewhere */}
           <FlexBox flexDirection="row" alignItems="center" gap=".5rem">
             <img className="token__thumb" alt={`${tokenName} icon`} src={info.row.original.image} />
             <span className="token__title">{tokenName}</span>
