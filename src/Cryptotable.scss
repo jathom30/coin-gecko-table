@@ -1,0 +1,15 @@
+.CryptoTable {
+  padding: 1rem;
+  &__header {
+    white-space: nowrap;
+    padding: 1rem;
+    font-size: 1.125rem;
+    text-align: left;
+  }
+  &__cell {
+    padding: 1rem;
+  }
+  &--error {
+    padding: 1rem;
+  }
+}

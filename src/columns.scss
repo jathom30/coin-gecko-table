@@ -1,0 +1,15 @@
+.token {
+  &__thumb {
+    aspect-ratio: 1 / 1;
+    width: 2rem;
+    object-fit: contain;
+  }
+  &__title {
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
+
+.negative-value {
+  color: red;
+}

@@ -1,0 +1,37 @@
+.Fetching {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: #242424;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 2s linear reverse infinite;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .Fetching {
+    border-color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.25);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
