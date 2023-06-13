@@ -5,11 +5,20 @@
     padding: 1rem;
     font-size: 1.125rem;
     text-align: left;
+    position: sticky;
+    top: 0;
+    background-color: #242424;
   }
   &__cell {
     padding: 1rem;
   }
   &--error {
     padding: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .CryptoTable {
+    background-color: #ffffff;
   }
 }
